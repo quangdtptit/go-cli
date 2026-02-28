@@ -1,0 +1,42 @@
+# configuration files
+.env
+
+# license files
+*.lic
+cmd/lic*/
+
+# editor and IDE paraphernalia
+.idea/*
+*.swp
+*.swo
+*~.vscode
+.vscode
+*.bak
+
+# Test binary, build with `go test -c`
+*.test
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.dat
+*.zip
+bin
+testbin/*
+patch.sh
+
+# log and history files
+*.log
+logs
+.history/
+vendor/
+debug/
+
+#terminal file
+ontune-nms-manager
+ontune-nms-manager.exe
+main
+main.exe
