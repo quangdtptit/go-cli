@@ -1,6 +1,7 @@
 package migrate
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/quangdtptit/go-cli/pkg/migration"
@@ -16,5 +17,6 @@ var upCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal(err)
 		}
+		fmt.Println("migrate up successfully")
 	},
 }

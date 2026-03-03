@@ -1,0 +1,16 @@
+APP:
+  NAME: go-cli
+  VERSION: 1.0.0
+  MODE: debug
+
+POSTGRES:
+  POOL_MAX: 10
+  POOL_MIN: 2
+  MAX_CONN_LIFETIME: 30m
+  MAX_CONN_IDLE_TIME: 10m
+  HEALTH_CHECK_PERIOD: 1m
+  HOST: localhost
+  PORT: 5432
+  DATABASE: postgres
+  USERNAME: postgres
+  PASSWORD: 123456aA@

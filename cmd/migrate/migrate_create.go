@@ -29,7 +29,7 @@ func createMigrationFile(name string, cmd *cobra.Command) error {
 	}
 
 	// up file
-	upFile := fmt.Sprintf("%s_%s.up.sql", timestamp, name)
+	upFile := fmt.Sprintf("%s__%s.up.sql", timestamp, name)
 	if _, err := os.Create(filepath.Join(path, upFile)); err != nil {
 		fmt.Println("Error creating up migration file:", err)
 		return err
@@ -38,7 +38,7 @@ func createMigrationFile(name string, cmd *cobra.Command) error {
 	}
 
 	// down file
-	downFile := fmt.Sprintf("%s_%s.down.sql", timestamp, name)
+	downFile := fmt.Sprintf("%s__%s.down.sql", timestamp, name)
 	if _, err := os.Create(filepath.Join(path, downFile)); err != nil {
 		fmt.Println("Error creating down migration file:", err)
 		return err
