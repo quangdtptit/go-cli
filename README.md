@@ -3,7 +3,7 @@
 ### Build and Run
 ```bash
 # Build the application
-$ make build appname
+$ make build APP_NAME="myapp"
 
 # Run serve
 $ make serve PORT="8081"
