@@ -15,6 +15,8 @@ type (
 	Config struct {
 		App      App      `mapstructure:"APP"`
 		Postgres Postgres `mapstructure:"POSTGRES"`
+		HTTP     HTTP     `mapstructure:"HTTP"`
+		PPROF    PPROF    `mapstructure:"PPROF"`
 	}
 
 	App struct {
@@ -34,6 +36,21 @@ type (
 		Username          string        `mapstructure:"USERNAME"`
 		Password          string        `mapstructure:"PASSWORD"`
 		Database          string        `mapstructure:"DATABASE"`
+	}
+
+	HTTP struct {
+		Port            string        `mapstructure:"Port"`
+		ReadTimeout     time.Duration `mapstructure:"ReadTimeout"`
+		WriteTimeout    time.Duration `mapstructure:"WriteTimeout"`
+		IdleTimeout     time.Duration `mapstructure:"IdleTimeout"`
+		ShutdownTimeout time.Duration `mapstructure:"ShutdownTimeout"`
+		UsePreforkMode  bool          `mapstructure:"UsePreforkMode"`
+		ApiTimeout      time.Duration `mapstructure:"ApiTimeout"`
+	}
+
+	PPROF struct {
+		Port    int  `mapstructure:"Port"`
+		Enabled bool `mapstructure:"Enabled"`
 	}
 )
 

@@ -1,13 +1,9 @@
 package serve
 
 import (
-	"fmt"
-
+	"github.com/quangdtptit/go-cli/config"
+	"github.com/quangdtptit/go-cli/internal/app"
 	"github.com/spf13/cobra"
-)
-
-const (
-	_defaultPort = 8080
 )
 
 var Cmd = &cobra.Command{
@@ -15,11 +11,7 @@ var Cmd = &cobra.Command{
 	Short: "Start the server",
 	Long:  "Use this cli to start server",
 	Run: func(cmd *cobra.Command, args []string) {
-		port := cmd.Flag("port").Value.String()
-		fmt.Println("Server started with port", port)
+		cfg, _ := config.LoadConfig()
+		app.Run(cfg)
 	},
-}
-
-func init() {
-	Cmd.Flags().IntP("port", "p", _defaultPort, "Port to serve on")
 }
